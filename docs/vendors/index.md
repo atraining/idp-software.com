@@ -24,6 +24,7 @@ Each vendor has its own dedicated page with detailed information about their pro
 ## Vendor Categories
 
 ### OCR & Document Intelligence
+
 ABBYY, Kofax, Konfuzio, IRIS, Epson, Kodak Alaris
 
 ### LLM & AI-Powered Solutions
