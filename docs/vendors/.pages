@@ -1,0 +1,5 @@
+title: Vendors
+arrange:
+  - index.md
+  - ... # This will automatically include all vendor folders that have an index.md file
+

@@ -1,0 +1,6 @@
+title: Research
+order_by: filename
+order: desc
+arrange:
+  - index.md
+  - ...  # This will automatically include all research papers in reverse chronological order

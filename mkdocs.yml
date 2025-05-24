@@ -1,0 +1,77 @@
+site_name: Intelligent Document Processing
+site_description: Anything to process documents Intelligently.
+site_author: Christopher Helm
+site_url: https://idp-software.com
+
+# Repository
+repo_name: atraining/idp-software.com
+repo_url: https://github.com/atraining/idp-software.com
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 Christopher Helm
+
+# Configuration
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: favicon.webp
+  icon:
+    logo: material/book-open-page-variant
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - def_list
+  - attr_list
+  - md_in_html
+
+# Plugins
+plugins:
+  - search
+  - awesome-pages
+  - minify:
+      minify_html: true
+
+# Custom CSS
+extra_css:
+  - assets/css/extra.css

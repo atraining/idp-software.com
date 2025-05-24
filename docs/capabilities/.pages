@@ -1,0 +1,17 @@
+title: Capabilities
+arrange:
+  - index.md
+  - ocr
+  - segmentation
+  - layout-analysis
+  - document-understanding
+  - text-processing
+  - natural-language-processing
+  - extraction
+  - visual-elements
+  - document-specific-tasks
+  - quality-verification
+  - integration-workflow
+  - security-compliance
+  - advanced-ai-capabilities
+  - ...

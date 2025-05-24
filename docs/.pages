@@ -1,0 +1,8 @@
+arrange:
+  - main
+  - capabilities
+  - research
+  - vendors
+  - events
+  - contribution
+  - ...
