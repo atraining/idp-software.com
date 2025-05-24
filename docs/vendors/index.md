@@ -10,17 +10,16 @@ Each vendor has its own dedicated page with detailed information about their pro
 
 | Vendor | Specialization | Key Features |
 |--------|----------------|-------------|
-| [ABBYY](abbyy/) | OCR & Document AI | Advanced OCR, Content Intelligence, NLP |
-| [A2iA (Mitek)](a2ia/) | Handwriting Recognition | Handwriting Recognition, Check Processing |
-| [AntWorks](antworks/) | Fractal Science | Cognitive Machine Reading, Pattern Recognition |
-| [Blue Prism](blue-prism/) | RPA & Automation | RPA, Intelligent Automation, Process Discovery |
-| [Kofax](tungstenautomation/) | Intelligent Automation | Cognitive Capture, Process Orchestration |
-| [UiPath](uipath/) | RPA & Automation | Document Understanding, RPA, Process Mining |
-| [OpenText](opentext/) | Enterprise Information Management | Content Management, Document Capture |
-| [Konfuzio](konfuzio/) | Document AI | ML-based extraction, Cloud & On-premise |
-| [Tiny IDP](tiny-idp/) | LLM-Powered Extraction | Custom JSON Output, API Integration |
-| [DataSnipper](datasnipper/) | Financial Document Processing | Excel Integration, Financial Document Analysis |
-| [DocaPoste](docaposte/) | Digital Services | Document Digitization, Electronic Signature |
+| [ABBYY](abbyy/index.md) | OCR & Document AI | Advanced OCR, Content Intelligence, NLP |
+| [A2iA (Mitek)](a2ia/index.md) | Handwriting Recognition | Handwriting Recognition, Check Processing |
+| [AntWorks](antworks/index.md) | Fractal Science | Cognitive Machine Reading, Pattern Recognition |
+| [Blue Prism](blue-prism/index.md) | RPA & Automation | RPA, Intelligent Automation, Process Discovery |
+| [UiPath](uipath/index.md) | RPA & Automation | Document Understanding, RPA, Process Mining |
+| [OpenText](opentext/index.md) | Enterprise Information Management | Content Management, Document Capture |
+| [Konfuzio](konfuzio/index.md) | Document AI | ML-based extraction, Cloud & On-premise |
+| [Tiny IDP](tiny-idp/index.md) | LLM-Powered Extraction | Custom JSON Output, API Integration |
+| [DataSnipper](datasnipper/index.md) | Financial Document Processing | Excel Integration, Financial Document Analysis |
+| [DocaPoste](docaposte/index.md) | Digital Services | Document Digitization, Electronic Signature |
 
 ## Vendor Categories
 
@@ -46,7 +45,7 @@ DocaPoste, Ricoh, Xerox, Canon
 
 If you would like to add information about a new vendor:
 
-1. Follow the [contribution guide](/contribution/) to learn how to set up a vendor folder
+1. Follow the [contribution guide](../contribution/index.md) to learn how to set up a vendor folder
 2. Create a pull request with your additions
 3. Our team will review and merge your contribution
 

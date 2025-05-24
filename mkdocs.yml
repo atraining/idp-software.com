@@ -9,7 +9,7 @@ repo_url: https://github.com/atraining/idp-software.com
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2025 Christopher Helm
+copyright: Copyright &copy; 2025 <a href="https://www.linkedin.com/in/christopher-helm-public/" target="_blank">Christopher Helm</a>
 
 # Configuration
 theme:
@@ -40,9 +40,9 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
+  # font:
+  #   text: Roboto
+  #   code: Roboto Mono
   favicon: favicon.webp
   icon:
     logo: material/book-open-page-variant
@@ -69,6 +69,7 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
+  - open-in-new-tab
   - minify:
       minify_html: true
 

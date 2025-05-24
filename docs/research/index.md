@@ -8,7 +8,7 @@ Papers are organized chronologically, with the most recent papers appearing firs
 
 If you would like to add a new research paper:
 
-1. Follow the [contribution guide](/contribution/) to learn how to set up a research paper folder
+1. Follow the [contribution guide](../contribution/index.md) to learn how to set up a research paper folder
 2. Create a pull request with your additions
 3. I will review and merge your contribution
 

@@ -5,3 +5,4 @@ mkdocs-awesome-pages-plugin==2.9.2
 pymdown-extensions>=9.9.0
 click==8.2.1
 pymarkdownlnt==0.9.30
+mkdocs-open-in-new-tab==1.0.8

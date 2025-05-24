@@ -1,7 +1,10 @@
-# IDP Software Documentation
-# Intelligent Document Processing (IDP) Software Documentation
+# Intelligent Document Processing
 
-This repository contains comprehensive documentation about Intelligent Document Processing (IDP) software solutions, including vendor information, technical capabilities, and research papers in the field.
+This repository contains comprehensive documentation about Intelligent Document Processing,
+including vendor information, technical capabilities, and research papers in the field.
+
+Visit [idp-software.com](https://idp-software.com)
+Visit [idp-software.com](https://idp-software.com)
 
 ## Overview
 
