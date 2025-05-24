@@ -1,8 +1,6 @@
 # IDP Software Documentation
 # Intelligent Document Processing (IDP) Software Documentation
 
-[![Deploy MkDocs to GitHub Pages](https://github.com/yourusername/idp-software/actions/workflows/deploy-mkdocs.yml/badge.svg)](https://github.com/yourusername/idp-software/actions/workflows/deploy-mkdocs.yml)
-
 This repository contains comprehensive documentation about Intelligent Document Processing (IDP) software solutions, including vendor information, technical capabilities, and research papers in the field.
 
 ## Overview
@@ -15,7 +13,7 @@ To work on this documentation locally:
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/idp-software.git
+   git clone https://github.com/atraining/idp-software.com.git
    cd idp-software
    ```
 
@@ -59,41 +57,6 @@ This documentation is licensed under [LICENSE]. See the LICENSE file for details
 
 Documentation site for IDP (Intelligent Document Processing) Software, built with MkDocs and the Material theme.
 
-## Overview
-
-This repository contains the documentation for IDP Software, designed to help users understand and effectively use the software for document processing tasks.
-
-## Local Development
-
-To work on this documentation locally:
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/idp-software.git
-   cd idp-software
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Start the local development server:
-   ```bash
-   mkdocs serve
-   ```
-
-4. Open your browser and go to `http://localhost:8000`
-
-## Documentation Structure
-
-- `docs/` - Documentation source files (Markdown)
-  - `vendors/` - Vendor-specific documentation (each in its own folder)
-  - `capabilities/` - IDP capabilities documentation
-  - `contribution/` - Contribution guidelines
-- `mkdocs.yml` - MkDocs configuration
-- `.github/workflows/` - GitHub Actions workflows for automated deployment
-
 ### Navigation Structure
 
 This project uses the `mkdocs-awesome-pages-plugin` to automatically include all folders with `index.md` files in the navigation. To add new content:
@@ -101,6 +64,7 @@ This project uses the `mkdocs-awesome-pages-plugin` to automatically include all
 1. Create a folder in the appropriate section (e.g., `docs/vendors/your-vendor/`)
 2. Add an `index.md` file in that folder
 3. Optionally add a `.pages` file to customize the navigation order
+4. Add a `assets` folder if you want to add images or other files.
 
 For more details, see the [Contribution Guide](docs/contribution/index.md).
 

@@ -5,8 +5,7 @@ A list of events related to Intelligent Document Processing (IDP), AI in documen
 Each entry includes the event name, location, organizer (if available), and a verified link.
 
 !!! note "Would you link to add an event?"
-    Please create a ticket. Please mention the name, the organizer, the date, and a URL. 
-    I would be interested to summarize your event. Please create a pull request.
+    Please create a ticket.
 
 ## 2025
 
