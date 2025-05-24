@@ -50,12 +50,12 @@ Common metrics for evaluating OCR performance:
 - **Mail Sorting**: Automatically reading addresses on mail
 - **License Plate Recognition**: Identifying vehicle license plates
 
-## Leading OCR Technologies
+## OCR Technologies
 
 | Technology | Developer | Strengths |
 |------------|-----------|-----------|
 | Tesseract | Google | Open-source, supports 100+ languages |
-| ABBYY FineReader | ABBYY | High accuracy, complex layout handling |
+| [ABBYY FineReader](../vendors/abbyy/index.md) | ABBYY | High accuracy, complex layout handling |
 | Amazon Textract | Amazon | Cloud-based, integrates with AWS |
 | Microsoft Azure OCR | Microsoft | Cloud-based, multilingual support |
 
@@ -64,3 +64,4 @@ Common metrics for evaluating OCR performance:
 - [Understanding OCR Accuracy](https://www.abbyy.com/ocr-sdk/evaluate-ocr-quality/)
 - [Tesseract OCR GitHub](https://github.com/tesseract-ocr/tesseract)
 - [OCR Evaluation Tools](https://github.com/impactcentre/ocrevaluation)
+- [Cem Dilmegani and Şevval Alper: OCR Benchmark](https://research.aimultiple.com/ocr-accuracy/)
