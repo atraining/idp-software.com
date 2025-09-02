@@ -1,0 +1,111 @@
+---
+title: "2025-08-03 to 2025-09-02"
+date: 2025-09-02
+draft: false
+summary: "Recent news and updates about duco"
+tags: ["news", "vendor", "duco"]
+categories: ["vendor-news"]
+---
+
+# August 03, 2025 to September 02, 2025 (30 days) News Period 
+
+**Total Articles Found:** 3  
+**Search Period:** August 03, 2025 to September 02, 2025 (30 days)  
+**Last Updated:** September 02, 2025 at 03:57 PM
+
+---
+
+## News Review for duco
+
+# Duco News Review
+
+## Executive Summary
+
+Based on the provided articles, no significant developments were identified for Duco, the Intelligent Document Processing (IDP) vendor, during this reporting period. The articles primarily covered Duco Events, a New Zealand-based entertainment company founded by David Higgins that specializes in live music productions, including their expansion of the Mānuka Phuel Full Metal Orchestra show to Christchurch and scaling up of the Synthony Festival for 2026. Additionally, one article mentioned Duco van Lanschot, co-founder of fintech startup Duna, discussing AI usage in recruitment processes. None of these developments relate to the IDP technology company Duco or impact the intelligent document processing market landscape.
+
+## Key Developments
+
+No relevant developments were identified for Duco, the IDP vendor, during this reporting period. All mentions of "Duco" in the provided articles refer to either Duco Events (an entertainment company) or an individual named Duco van Lanschot from a different fintech company.
+
+## Market Context
+
+The articles provided do not contain information relevant to the Intelligent Document Processing market or Duco's position within the IDP industry. The entertainment industry developments covered under Duco Events do not impact the enterprise software or document processing sectors.
+
+## Notable Quotes
+
+The only quote mentioning someone named Duco comes from Duco van Lanschot, co-founder of fintech startup Duna, who stated: "If an engineer used ChatGPT to polish a written application, fine. That's not the job. But for a growth or sales hire to use it very obviously is a big red flag. The job itself involves public-facing comms and emailing stakeholders — and in a sea of generic, AI-generated copy, I want us to be as human as possible." This quote, from [The Next Web](https://thenextweb.com/news/ai-hiring-recruitment-playbook), relates to AI usage in recruitment rather than document processing technology.
+
+## Strategic Implications
+
+No strategic implications can be assessed for Duco, the IDP vendor, as no relevant news or developments were identified in the provided articles. The company's competitive position and future direction in the intelligent document processing market remain unchanged based on this news cycle.
+
+## Individual Articles
+
+### Article 1: Mānuka Phuel Full Metal Orchestra launches South Island show
+
+**Source:** [View Full Article](https://www.nzherald.co.nz/nz/christchurch/manuka-phuel-full-metal-orchestra-launches-south-island-show/YG2HKBI7M5EGFLRJA67TDFYKTQ/)
+
+## Summary
+
+This article covers Duco Events, an entertainment/event management company, announcing the expansion of their Mānuka Phuel Full Metal Orchestra show to Christchurch after a successful Auckland performance. This is not related to the IDP (Intelligent Document Processing) industry or software technology, but rather focuses on live music entertainment events featuring rock and metal artists with orchestral accompaniment.
+
+## Executive Insights
+
+**David Higgins, Founder of Duco Events**
+
+> "The debut of Mānuka Phuel Full Metal Orchestra in Auckland exceeded every expectation, not only in ticket sales but in the sheer power of the audience's response. Christchurch, with its passionate rock community, is the natural next step. This show is not simply a concert; it is a clash of cultures that redefines what live music can be when two seemingly opposite worlds collide. The atmosphere in the arena at the Auckland show was next level - raw, powerful and unforgettable energy."
+
+*Context: Announcing the expansion of the Full Metal Orchestra show to Christchurch*
+
+*Significance: Shows the founder's vision for expanding live entertainment events and creating unique cultural experiences*
+
+
+
+---
+
+### Article 2: Synthony Festival 2026 lineup announced: The Exponents, The Black Seeds, joining Faithless and Peking Duk
+
+**Source:** [View Full Article](https://www.nzherald.co.nz/entertainment/synthony-festival-2026-lineup-announced-the-exponents-the-black-seeds-joining-faithless-and-peking-duk/QE5WXTDB6FBOZKATH34LHGK5WM/)
+
+## Summary
+
+Duco Events, founded by David Higgins, is significantly scaling up its successful Synthony Festival for 2026, building on the momentum of the 2025 event that attracted 40,000 attendees and featured a $1.8 million production with 183 performers. The company is positioning itself in the premium entertainment market by combining orchestral music with contemporary acts, creating what has been described as the 'Cirque du Soleil of music.' With enhanced sound, world-class visuals, and an expanded international and local artist lineup including The Exponents, Faithless, and Peking Duk, Duco Events is demonstrating strong growth potential and market differentiation in the live entertainment industry.
+
+## Executive Insights
+
+**David Higgins, founder of Duco Events**
+
+> "In 2026, we're planning to scale up every aspect, from the stage production to the artist line-up. This year's line-up showcases a strong mix of international artists and leading talent from Aotearoa. We are continuing to elevate the festival in 2026, with enhanced sound, world-class visuals, creating a premium live experience for all attendees."
+
+*Context: Discussing expansion plans for Synthony Festival 2026*
+
+*Significance: Shows company's commitment to growth and premium positioning in the entertainment market*
+
+
+
+---
+
+### Article 3: In recruitment, an AI-on-AI war is rewriting the hiring playbook
+
+**Source:** [View Full Article](https://thenextweb.com/news/ai-hiring-recruitment-playbook)
+
+## Summary
+
+This article focuses on AI's impact on recruitment processes rather than Intelligent Document Processing. The only relevant mention is a quote from Duco van Lanschot, co-founder of fintech startup Duna, discussing his company's approach to AI usage in hiring - accepting AI-polished applications for technical roles while viewing obvious AI use as problematic for customer-facing positions. This provides limited insight into fintech leadership perspectives on AI adoption but does not contain information about IDP vendor Duco or developments relevant to the document processing industry.
+
+## Executive Insights
+
+**Duco van Lanschot, co-founder of fintech startup Duna**
+
+> "If an engineer used ChatGPT to polish a written application, fine. That's not the job. But for a growth or sales hire to use it very obviously is a big red flag. The job itself involves public-facing comms and emailing stakeholders — and in a sea of generic, AI-generated copy, I want us to be as human as possible."
+
+*Context: Discussing acceptable AI usage in hiring processes based on role requirements*
+
+*Significance: Provides insight into how fintech leaders are navigating AI adoption in recruitment while maintaining human authenticity in customer-facing roles*
+
+
+
+
+
+---
+
