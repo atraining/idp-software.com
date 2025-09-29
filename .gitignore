@@ -44,3 +44,6 @@ config.py  # Contains API keys - don't commit this!
 
 # News files (optional - remove if you want to commit them)
 docs/vendors/news/
+
+# Claude
+CLAUDE.md
