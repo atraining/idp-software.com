@@ -1,4 +1,116 @@
-/* custom css not yet needed*/
+/* Custom color palette - Override MkDocs Material colors */
+/* Neutral, professional color scheme for vendor directory */
+
+/* Light mode (default scheme) */
+[data-md-color-scheme="default"] {
+    /* Primary colors - Blue theme */
+    --md-primary-fg-color: #2563eb;
+    --md-primary-fg-color--light: #eff6ff;
+    --md-primary-fg-color--dark: #1e40af;
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--light: #ffffffb3;
+
+    /* Accent colors */
+    --md-accent-fg-color: #2563eb;
+    --md-accent-fg-color--transparent: #2563eb1a;
+    --md-accent-bg-color: #ffffff;
+    --md-accent-bg-color--light: #ffffffb3;
+
+    /* Background and text */
+    --md-default-bg-color: #f8fafc;
+    --md-default-fg-color: #334155;
+    --md-default-fg-color--light: #64748b;
+    --md-default-fg-color--lighter: #64748b;
+    --md-default-fg-color--lightest: #e2e8f0;
+
+    /* Code blocks */
+    --md-code-bg-color: #ffffff;
+    --md-code-fg-color: #334155;
+
+    /* Footer */
+    --md-footer-bg-color: #1e293b;
+    --md-footer-bg-color--dark: #1e293b;
+    --md-footer-fg-color: #ffffff;
+
+    /* Typography */
+    --md-typeset-color: #334155;
+    --md-typeset-a-color: #2563eb;
+
+    /* Status colors */
+    --md-typeset-mark-color: #f59e0b1a;
+    --md-admonition-fg-color: #334155;
+}
+
+/* Dark mode (slate scheme) */
+[data-md-color-scheme="slate"] {
+    /* Primary colors */
+    --md-primary-fg-color: #2563eb;
+    --md-primary-fg-color--light: #1e40af;
+    --md-primary-fg-color--dark: #1e40af;
+    --md-primary-bg-color: #1e293b;
+    --md-primary-bg-color--light: #1e293bb3;
+
+    /* Accent colors */
+    --md-accent-fg-color: #2563eb;
+    --md-accent-fg-color--transparent: #2563eb1a;
+    --md-accent-bg-color: #1e293b;
+    --md-accent-bg-color--light: #1e293bb3;
+}
+
+/* Override blue color scheme with custom colors */
+[data-md-color-primary="blue"] {
+    --md-primary-fg-color: #2563eb;
+    --md-primary-fg-color--light: #eff6ff;
+    --md-primary-fg-color--dark: #1e40af;
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-accent="blue"] {
+    --md-accent-fg-color: #2563eb;
+    --md-accent-fg-color--transparent: #2563eb1a;
+    --md-accent-bg-color: #ffffff;
+    --md-accent-bg-color--light: #ffffffb3;
+}
+
+/* Navigation header with secondary color */
+.md-header {
+    background-color: #1e293b;
+}
+
+/* Apply custom text colors */
+.md-typeset {
+    color: #334155;
+}
+
+.md-typeset a {
+    color: #2563eb;
+}
+
+.md-typeset a:hover {
+    color: #1e40af;
+}
+
+/* Admonition/callout colors using status colors */
+.md-typeset .admonition.success,
+.md-typeset .admonition.check {
+    border-color: #10b981;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset .admonition.error {
+    border-color: #ef4444;
+}
+
+.md-typeset .admonition.warning,
+.md-typeset .admonition.caution {
+    border-color: #f59e0b;
+}
+
+.md-typeset .admonition.info,
+.md-typeset .admonition.note {
+    border-color: #0ea5e9;
+}
 
 /* Style external links differently */
 a[href^="http"]:not([href*="idp-software.com"]):not([href*="localhost"]) {

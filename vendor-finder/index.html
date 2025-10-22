@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDP Software Vendor Finder - Find Your Ideal IDP Solution</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Botpoison spam protection -->
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
+</head>
+<body>
+    <!-- App Layout -->
+    <div class="app-layout">
+        <!-- Top Header -->
+        <header class="app-header">
+            <div class="app-header-left">
+                <div class="logo">
+                    <div class="logo-icon">IDP</div>
+                    <div class="logo-text">
+                        <div class="logo-title">IDP Software Finder</div>
+                        <div class="logo-subtitle">Vendor Comparison Tool</div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header-right">
+                <a href="https://idp-software.com/vendors/" class="btn btn-outline">View All Vendors</a>
+            </div>
+        </header>
+
+        <!-- Sidebar Navigation -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <h3>Your Vendor Requirements</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <nav class="sidebar-nav" id="sidebarSteps">
+                <div class="sidebar-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-info">
+                        <div class="step-name">Industry & Use Case</div>
+                        <div class="step-status">In Progress</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-info">
+                        <div class="step-name">Document Ingestion</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-info">
+                        <div class="step-name">Document Types</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-info">
+                        <div class="step-name">Document Splitting</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-info">
+                        <div class="step-name">Classification</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-info">
+                        <div class="step-name">Data Extraction</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="7">
+                    <div class="step-number">7</div>
+                    <div class="step-info">
+                        <div class="step-name">Processing & Validation</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="8">
+                    <div class="step-number">8</div>
+                    <div class="step-info">
+                        <div class="step-name">Export & Integration</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="9">
+                    <div class="step-number">9</div>
+                    <div class="step-info">
+                        <div class="step-name">Technical Requirements</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+                <div class="sidebar-step" data-step="10">
+                    <div class="step-number">✓</div>
+                    <div class="step-info">
+                        <div class="step-name">Get Vendor Matches</div>
+                        <div class="step-status">Not Started</div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="app-main">
+            <div id="requirementsForm" class="form-container" data-botpoison-public-key="pk_53e48ba7-bd52-4dc8-9104-c837a77aea6c">
+
+            <!-- Step 1: Industry & Use Case -->
+            <div class="step active" id="step1">
+                <div class="step-content">
+                    <div class="step-indicator">Step 1 of 9</div>
+                    <h2>What's your industry and primary use case?</h2>
+                    <p class="help-text">This helps us identify vendors specialized in your domain</p>
+
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select id="industry" onchange="updateRequirementsSummary()">
+                            <option value="">Select your industry...</option>
+                            <option value="banking">Banking & Finance</option>
+                            <option value="insurance">Insurance</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="legal">Legal</option>
+                            <option value="government">Government</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="retail">Retail & E-commerce</option>
+                            <option value="logistics">Logistics & Supply Chain</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Primary Use Case</label>
+                        <input type="text" id="useCase" placeholder="e.g., Invoice processing, KYC onboarding, Claims processing" onchange="updateRequirementsSummary()">
+                        <small>Describe the main document process you want to automate</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expected Monthly Document Volume</label>
+                        <select id="documentVolume">
+                            <option value="">Select volume...</option>
+                            <option value="<100">Less than 100</option>
+                            <option value="100-1000">100 - 1,000</option>
+                            <option value="1000-10000">1,000 - 10,000</option>
+                            <option value="10000-100000">10,000 - 100,000</option>
+                            <option value=">100000">More than 100,000</option>
+                        </select>
+                        <small>This helps identify vendors capable of handling your processing scale</small>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Document Ingestion -->
+            <div class="step" id="step2">
+                <div class="step-content">
+                    <div class="step-indicator">Step 2 of 9</div>
+                    <h2>How will documents enter the system?</h2>
+                    <p class="help-text">Select all ingestion methods you require</p>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="email" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📧</div>
+                                <div>
+                                    <div class="card-title">Email Upload</div>
+                                    <div class="card-description">Process documents sent to dedicated email addresses</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="api" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🔌</div>
+                                <div>
+                                    <div class="card-title">API Integration</div>
+                                    <div class="card-description">Push documents programmatically from existing systems</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="upload" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📤</div>
+                                <div>
+                                    <div class="card-title">Web Upload</div>
+                                    <div class="card-description">Manual document upload through web interface</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="scanner" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🖨️</div>
+                                <div>
+                                    <div class="card-title">Scanner Integration</div>
+                                    <div class="card-description">Direct connection with office scanners</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="storage" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">☁️</div>
+                                <div>
+                                    <div class="card-title">Cloud Storage</div>
+                                    <div class="card-description">Monitor folders in Dropbox, Google Drive, S3, etc.</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="ingestion" value="mobile" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📱</div>
+                                <div>
+                                    <div class="card-title">Mobile Capture</div>
+                                    <div class="card-description">Mobile app for on-the-go document capture</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 3: OCR & Pre-processing -->
+            <div class="step" id="step3">
+                <div class="step-content">
+                    <div class="step-indicator">Step 3 of 9</div>
+                    <h2>What types of documents will you process?</h2>
+                    <p class="help-text">This determines required OCR capabilities and accuracy needs</p>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="docTypes" value="digital" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📄</div>
+                                <div>
+                                    <div class="card-title">Born-Digital PDFs</div>
+                                    <div class="card-description">Digital documents with selectable text</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="docTypes" value="scanned" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📋</div>
+                                <div>
+                                    <div class="card-title">Scanned Documents</div>
+                                    <div class="card-description">Paper documents requiring OCR processing</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="docTypes" value="handwritten" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">✍️</div>
+                                <div>
+                                    <div class="card-title">Handwritten Forms</div>
+                                    <div class="card-description">Documents with handwritten fields (ICR required)</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="docTypes" value="images" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🖼️</div>
+                                <div>
+                                    <div class="card-title">Images (JPG, PNG)</div>
+                                    <div class="card-description">Photo captures from mobile or camera</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="docTypes" value="complex" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📊</div>
+                                <div>
+                                    <div class="card-title">Complex Layouts</div>
+                                    <div class="card-description">Tables, multi-column, varied formats</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expected Document Quality</label>
+                        <select id="docQuality">
+                            <option value="high">High quality (clear, good resolution)</option>
+                            <option value="medium">Medium quality (occasional issues)</option>
+                            <option value="low">Low quality (frequent quality issues)</option>
+                            <option value="mixed">Mixed quality</option>
+                        </select>
+                        <small>Helps identify vendors with robust pre-processing capabilities</small>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Document Splitting -->
+            <div class="step" id="step4">
+                <div class="step-content">
+                    <div class="step-indicator">Step 4 of 9</div>
+                    <h2>Do documents need to be split?</h2>
+                    <p class="help-text">Some files contain multiple documents requiring separation</p>
+
+                    <div class="radio-group">
+                        <label class="radio-card">
+                            <input type="radio" name="splitting" value="no" checked onchange="updateRequirementsSummary(); toggleSplittingDetails(false)">
+                            <div class="card-content">
+                                <div class="card-icon">📄</div>
+                                <div>
+                                    <div class="card-title">No splitting needed</div>
+                                    <div class="card-description">Each file is a single document</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="radio-card">
+                            <input type="radio" name="splitting" value="yes" onchange="updateRequirementsSummary(); toggleSplittingDetails(true)">
+                            <div class="card-content">
+                                <div class="card-icon">📑</div>
+                                <div>
+                                    <div class="card-title">Yes, split documents</div>
+                                    <div class="card-description">Files contain multiple documents</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="splittingDetails" class="conditional-section" style="display: none;">
+                        <div class="form-group">
+                            <label>Preferred Splitting Method</label>
+                            <select id="splittingMethod">
+                                <option value="ai">AI-based (automatic detection)</option>
+                                <option value="barcode">Barcode/QR code separators</option>
+                                <option value="blank">Blank page separators</option>
+                                <option value="pages">Fixed page count</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Typical documents per file</label>
+                            <input type="number" id="docsPerFile" placeholder="e.g., 5" min="2" max="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Classification -->
+            <div class="step" id="step5">
+                <div class="step-content">
+                    <div class="step-indicator">Step 5 of 9</div>
+                    <h2>Document Classification Requirements</h2>
+                    <p class="help-text">How many document types will the system need to identify?</p>
+
+                    <div class="form-group">
+                        <label>Number of different document types</label>
+                        <select id="categoryCount" onchange="updateCategoryInputs(); updateRequirementsSummary()">
+                            <option value="1">1 type (no classification needed)</option>
+                            <option value="2-5">2-5 types</option>
+                            <option value="6-10">6-10 types</option>
+                            <option value="11-20">11-20 types</option>
+                            <option value=">20">More than 20 types</option>
+                        </select>
+                    </div>
+
+                    <div id="categoryInputContainer" style="display: none;">
+                        <div class="form-group">
+                            <label>List your document types (optional)</label>
+                            <textarea id="categoryList" rows="4" placeholder="e.g., Invoice, Purchase Order, Receipt, Contract, ID Card&#10;(one per line)"></textarea>
+                            <small>Helps identify vendors with pre-trained models for these types</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="needsClassification" onchange="updateRequirementsSummary()">
+                            Documents look visually similar and require AI classification
+                        </label>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Data Extraction -->
+            <div class="step" id="step6">
+                <div class="step-content">
+                    <div class="step-indicator">Step 6 of 9</div>
+                    <h2>What data needs to be extracted?</h2>
+                    <p class="help-text">Define the extraction complexity to match vendor capabilities</p>
+
+                    <div class="form-group">
+                        <label>Expected fields per document type</label>
+                        <select id="extractionComplexity" onchange="toggleExtractionDetails(); updateRequirementsSummary()">
+                            <option value="">Select...</option>
+                            <option value="none">No data extraction needed</option>
+                            <option value="simple">Simple (1-5 fields)</option>
+                            <option value="medium">Medium (6-15 fields)</option>
+                            <option value="complex">Complex (16-30 fields)</option>
+                            <option value="very-complex">Very Complex (30+ fields)</option>
+                        </select>
+                    </div>
+
+                    <div id="extractionDetails" class="conditional-section" style="display: none;">
+                        <div class="form-group">
+                            <label>Key data fields (optional)</label>
+                            <textarea id="extractionFields" rows="5" placeholder="e.g., Invoice Number, Date, Total Amount, Vendor Name, Line Items&#10;(one per line)"></textarea>
+                            <small>Helps identify vendors with relevant extraction templates</small>
+                        </div>
+
+                        <div class="checkbox-group-compact">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extractionFeatures" value="tables" onchange="updateRequirementsSummary()">
+                                Extract data from tables (line items)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extractionFeatures" value="validation" onchange="updateRequirementsSummary()">
+                                Field validation (format checking, mandatory fields)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extractionFeatures" value="confidence" onchange="updateRequirementsSummary()">
+                                Confidence scoring for extracted data
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extractionFeatures" value="relationships" onchange="updateRequirementsSummary()">
+                                Extract relationships between data points
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 7: Data Processing & Validation -->
+            <div class="step" id="step7">
+                <div class="step-content">
+                    <div class="step-indicator">Step 7 of 9</div>
+                    <h2>Processing & Validation Requirements</h2>
+                    <p class="help-text">Select the processing capabilities you need</p>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="human-review" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">👤</div>
+                                <div>
+                                    <div class="card-title">Human Review Queue</div>
+                                    <div class="card-description">Review low-confidence or flagged documents</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="business-rules" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">⚙️</div>
+                                <div>
+                                    <div class="card-title">Business Rules Engine</div>
+                                    <div class="card-description">Custom validation and processing rules</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="external-validation" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🔍</div>
+                                <div>
+                                    <div class="card-title">External Data Validation</div>
+                                    <div class="card-description">Verify against external databases or APIs</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="duplicate-detection" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🔄</div>
+                                <div>
+                                    <div class="card-title">Duplicate Detection</div>
+                                    <div class="card-description">Identify and flag duplicate documents</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="enrichment" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">✨</div>
+                                <div>
+                                    <div class="card-title">Data Enrichment</div>
+                                    <div class="card-description">Enhance data with additional information</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="processing" value="approval-workflow" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">✅</div>
+                                <div>
+                                    <div class="card-title">Approval Workflows</div>
+                                    <div class="card-description">Multi-level approval processes</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 8: Export & Integration -->
+            <div class="step" id="step8">
+                <div class="step-content">
+                    <div class="step-indicator">Step 8 of 9</div>
+                    <h2>Where should extracted data go?</h2>
+                    <p class="help-text">Select required export and integration methods</p>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="api" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🔌</div>
+                                <div>
+                                    <div class="card-title">REST/SOAP API</div>
+                                    <div class="card-description">Push data to systems via API</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="erp" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📊</div>
+                                <div>
+                                    <div class="card-title">ERP Integration</div>
+                                    <div class="card-description">SAP, Oracle, Microsoft Dynamics, etc.</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="crm" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">👥</div>
+                                <div>
+                                    <div class="card-title">CRM Systems</div>
+                                    <div class="card-description">Salesforce, HubSpot, etc.</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="database" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">💾</div>
+                                <div>
+                                    <div class="card-title">Database Export</div>
+                                    <div class="card-description">SQL Server, PostgreSQL, MongoDB, etc.</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="files" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">📁</div>
+                                <div>
+                                    <div class="card-title">File Export</div>
+                                    <div class="card-description">CSV, Excel, JSON, XML formats</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="webhook" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🔔</div>
+                                <div>
+                                    <div class="card-title">Webhooks</div>
+                                    <div class="card-description">Real-time event notifications</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="storage" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">☁️</div>
+                                <div>
+                                    <div class="card-title">Cloud Storage</div>
+                                    <div class="card-description">S3, Azure Blob, Google Cloud Storage</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" name="export" value="rpa" onchange="updateRequirementsSummary()">
+                            <div class="card-content">
+                                <div class="card-icon">🤖</div>
+                                <div>
+                                    <div class="card-title">RPA Integration</div>
+                                    <div class="card-description">UiPath, Automation Anywhere, Blue Prism</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Specific systems to integrate (optional)</label>
+                        <input type="text" id="integrationSystems" placeholder="e.g., SAP S/4HANA, Salesforce, custom ERP">
+                        <small>Helps identify vendors with pre-built connectors</small>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 9: Technical Requirements -->
+            <div class="step" id="step9">
+                <div class="step-content">
+                    <div class="step-indicator">Step 9 of 9</div>
+                    <h2>Technical & Security Requirements</h2>
+                    <p class="help-text">Define your deployment and compliance needs</p>
+
+                    <div class="form-group">
+                        <label>Deployment Preference</label>
+                        <select id="deployment">
+                            <option value="">Select deployment model...</option>
+                            <option value="cloud">Cloud (SaaS)</option>
+                            <option value="on-premise">On-Premise</option>
+                            <option value="hybrid">Hybrid (Cloud + On-Premise)</option>
+                            <option value="private-cloud">Private Cloud</option>
+                        </select>
+                        <small>Filters vendors by deployment capability</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Authentication & Security</label>
+                        <div class="checkbox-group-compact">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="auth" value="sso">
+                                Single Sign-On (SSO)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="auth" value="saml">
+                                SAML 2.0
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="auth" value="oauth">
+                                OAuth / OpenID Connect
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="auth" value="ldap">
+                                LDAP / Active Directory
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="auth" value="mfa">
+                                Multi-Factor Authentication (MFA)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Required Compliance & Certifications</label>
+                        <div class="checkbox-group-compact">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="gdpr">
+                                GDPR (General Data Protection Regulation)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="hipaa">
+                                HIPAA
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="sox">
+                                SOX
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="iso27001">
+                                ISO 27001
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="pci-dss">
+                                PCI-DSS
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="compliance" value="soc2">
+                                SOC 2
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Geographic Data Residency</label>
+                        <select id="dataResidency">
+                            <option value="">Select region...</option>
+                            <option value="us">United States</option>
+                            <option value="eu">European Union</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="apac">Asia Pacific</option>
+                            <option value="canada">Canada</option>
+                            <option value="specific">Specific country requirement</option>
+                        </select>
+                        <small>Filters vendors with data centers in your region</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Implementation Timeline</label>
+                        <select id="timeline">
+                            <option value="">Select timeline...</option>
+                            <option value="immediate">Immediate (within 1 month)</option>
+                            <option value="short">Short-term (1-3 months)</option>
+                            <option value="medium">Medium-term (3-6 months)</option>
+                            <option value="long">Long-term (6+ months)</option>
+                            <option value="exploring">Just exploring options</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget Range (Annual)</label>
+                        <select id="budget">
+                            <option value="">Select budget range...</option>
+                            <option value="<25k">Less than $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-250k">$100,000 - $250,000</option>
+                            <option value="250k-500k">$250,000 - $500,000</option>
+                            <option value=">500k">More than $500,000</option>
+                            <option value="undefined">Not defined yet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expected Number of Users</label>
+                        <select id="userCount">
+                            <option value="">Select user count...</option>
+                            <option value="1-10">1-10 users</option>
+                            <option value="11-50">11-50 users</option>
+                            <option value="51-100">51-100 users</option>
+                            <option value="101-500">101-500 users</option>
+                            <option value="500+">500+ users</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Requirements or Notes (optional)</label>
+                        <textarea id="additionalNotes" rows="4" placeholder="Any specific requirements, integrations, or concerns..."></textarea>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Get Vendor Matches</button>
+                </div>
+            </div>
+
+            <!-- Step 10: Contact Information -->
+            <div class="step" id="step10">
+                <div class="step-content">
+                    <div class="step-indicator">Final Step</div>
+                    <h2>Get Your Vendor Recommendations</h2>
+                    <p class="help-text">We'll send you a personalized vendor comparison report</p>
+
+                    <div class="requirements-summary" id="requirementsSummary">
+                        <!-- Summary will be generated by JavaScript -->
+                    </div>
+
+                    <div class="form-group">
+                        <label>First Name *</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name *</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" id="company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" id="jobTitle">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select id="companySize">
+                            <option value="">Select company size...</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="501-1000">501-1,000 employees</option>
+                            <option value="1001-5000">1,001-5,000 employees</option>
+                            <option value="5000+">5,000+ employees</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter">
+                            Send me updates about IDP software vendors and industry trends
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consent" required>
+                            I agree to receive vendor recommendations based on my requirements *
+                        </label>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button class="btn btn-secondary" onclick="prevStep()">Back</button>
+                    <button class="btn btn-primary btn-submit" onclick="submitRequirements()">Get Vendor Matches</button>
+                </div>
+            </div>
+
+            <!-- Success Screen -->
+            <div class="step" id="successStep" style="display: none;">
+                <div class="step-content success-content">
+                    <div class="success-icon">✓</div>
+                    <h1>Thank You!</h1>
+                    <p class="subtitle">Your vendor matching request has been submitted successfully.</p>
+
+                    <div class="success-details">
+                        <p>We've received your requirements and will analyze them to identify the best-matching IDP software vendors. You'll receive within 1-2 business days:</p>
+                        <ul>
+                            <li>A detailed vendor comparison report based on your specific requirements</li>
+                            <li>Capability matching scores for each recommended vendor</li>
+                            <li>Links to detailed vendor profiles on idp-software.com</li>
+                            <li>Additional resources to support your evaluation process</li>
+                        </ul>
+                        <p>Check your email for a confirmation message with your requirements summary.</p>
+                    </div>
+
+                    <div class="success-actions">
+                        <a href="/vendors/" class="btn btn-primary">Browse All Vendors</a>
+                        <button class="btn btn-secondary" onclick="location.reload()">Start New Search</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
